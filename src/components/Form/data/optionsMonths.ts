@@ -1,0 +1,21 @@
+export const optionsMonths = [
+  { name: "Every month", value: "*", isUnique: true },
+  { name: "Every even month", value: "*/2", isUnique: true },
+  { name: "Every odd month", value: "1-11/2", isUnique: true },
+  { name: "Every 3 months", value: "*/3", isUnique: true },
+  { name: "Every 4 months", value: "*/4", isUnique: true },
+  { name: "Every 6 months", value: "*/6", isUnique: true },
+
+  { name: "January", value: "1", isUnique: false },
+  { name: "February", value: "2", isUnique: false },
+  { name: "March", value: "3", isUnique: false },
+  { name: "April", value: "4", isUnique: false },
+  { name: "May", value: "5", isUnique: false },
+  { name: "June", value: "6", isUnique: false },
+  { name: "July", value: "7", isUnique: false },
+  { name: "August", value: "8", isUnique: false },
+  { name: "September", value: "9", isUnique: false },
+  { name: "October", value: "10", isUnique: false },
+  { name: "November", value: "11", isUnique: false },
+  { name: "December", value: "12", isUnique: false },
+];
