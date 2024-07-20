@@ -6,8 +6,8 @@ export const optionsDays = [
   { name: "Every 10th day of the month", value: "*/10", isUnique: true },
 
   ...Array.from({ length: 31 }, (_, i) => ({
-    name: i.toString(),
-    value: i.toString(),
+    name: (i + 1).toString(),
+    value: (i + 1).toString(),
     isUnique: false,
   })),
 ];

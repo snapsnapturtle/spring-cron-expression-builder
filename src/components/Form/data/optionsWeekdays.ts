@@ -1,7 +1,7 @@
 export const optionsWeekdays = [
   { name: "Every weekday", value: "*", isUnique: true },
-  { name: "Weekdays (Mon — Fri)", value: "MON-FRI", isUnique: true },
-  { name: "Weekends (Sat — Sun)", value: "SAT,SUN", isUnique: true },
+  { name: "Weekdays (Mon - Fri)", value: "MON-FRI", isUnique: true },
+  { name: "Weekends (Sat & Sun)", value: "SAT,SUN", isUnique: true },
 
   { name: "Monday", value: "MON", isUnique: false },
   { name: "Tuesday", value: "TUE", isUnique: false },

@@ -7,8 +7,8 @@ import {
   ListboxOptions,
   Transition,
 } from "@headlessui/react";
-import { IconDropDown } from "./components/IconDropDown.tsx";
-import { IconCheckmark } from "./components/IconCheckmark.tsx";
+import { IconSelector } from "./components/IconSelector.tsx";
+import { IconCheck } from "./components/IconCheck.tsx";
 import { useRef } from "react";
 import { removeDuplicates } from "./utils/removeDuplicates.ts";
 
@@ -71,13 +71,13 @@ export const MultiSelect = ({
                 <ListboxButton
                   onBlur={onBlur}
                   ref={inputRef}
-                  className="relative min-h-[40px] w-full cursor-default rounded-md border border-gray-400 bg-background-100 py-2 pl-3 pr-8 text-left text-sm text-gray-1000 transition-colors duration-150 hover:border-gray-500 focus:outline-none"
+                  className="relative min-h-[40px] w-full cursor-default rounded-md border border-gray-400 bg-background-100 py-2 pl-3 pr-8 text-left text-sm text-gray-1000 transition-[border-color] duration-150 hover:border-gray-500 focus:outline-none data-[open]:border-gray-500"
                 >
                   <span className="block truncate">
                     {(value ?? []).map((it) => it.name).join(", ")}
                   </span>
-                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-900">
-                    <IconDropDown />
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2 text-gray-700">
+                    <IconSelector width={20} height={20} />
                   </span>
                 </ListboxButton>
               </span>
@@ -94,7 +94,7 @@ export const MultiSelect = ({
                 <ListboxOptions
                   static
                   anchor={{ to: "bottom", gap: "4px", padding: "16px" }}
-                  className="!max-h-80 w-[var(--button-width)] overflow-auto rounded-md bg-background-100 py-1 text-sm leading-6 shadow-md focus:outline-none"
+                  className="!max-h-80 w-[var(--button-width)] overflow-auto rounded-md border border-gray-400 bg-background-100 py-2 text-sm shadow-md focus:outline-none"
                 >
                   {options.map((option) => {
                     const selected = value?.some(
@@ -106,18 +106,12 @@ export const MultiSelect = ({
                         key={option.value}
                         value={option}
                         as="div"
-                        className="relative cursor-default select-none py-2 pl-8 pr-4 text-gray-1000 data-[focus]:bg-gray-200"
+                        className="relative mx-2 cursor-default select-none rounded-md py-1.5 pl-2 pr-6 text-gray-1000 data-[focus]:bg-gray-200"
                       >
-                        <span
-                          className={`${
-                            selected ? "font-semibold" : "font-normal"
-                          } block truncate`}
-                        >
-                          {option.name}
-                        </span>
+                        <span className="block truncate">{option.name}</span>
                         {selected && (
-                          <span className="absolute inset-y-0 left-0 flex items-center pl-1.5 text-gray-900">
-                            <IconCheckmark />
+                          <span className="absolute inset-y-0 right-0 flex items-center pr-1.5 text-gray-1000">
+                            <IconCheck width={20} height={20} />
                           </span>
                         )}
                       </ListboxOption>
