@@ -6,6 +6,20 @@ updates:
       interval: "daily"
     reviewers:
       - "snapsnapturtle"
+    groups:
+      vite:
+        patterns:
+          - "vite"
+          - "@vitejs/*"
+      vitest:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+      eslint:
+        patterns:
+          - "eslint"
+          - "eslint-plugin-*"
+          - "@typescript-eslint/*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
