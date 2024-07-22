@@ -84,12 +84,12 @@ export const MultiSelect = ({
 
               <Transition
                 show={open}
-                enter="transition ease duration-75 transform origin-top"
-                enterFrom="opacity-0 scale-[98%]"
+                enter="transition ease-out duration-100 transform origin-top"
+                enterFrom="opacity-0 scale-[97%]"
                 enterTo="opacity-100 scale-100"
-                leave="transition ease duration-75 transform origin-top"
+                leave="transition ease-out duration-100 transform origin-top"
                 leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-[98%]"
+                leaveTo="opacity-0 scale-[97%]"
               >
                 <ListboxOptions
                   static
