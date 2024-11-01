@@ -1,10 +1,10 @@
 import { Fragment, useContext } from "react";
 import { CronExpressionContext } from "../../context/CronExpressionContext.tsx";
-import { calculateNextFiveOccurrences } from "../../utils/calculateNextFiveOccurrences.ts";
+import { calculateNextOccurrences } from "../../utils/calculateNextOccurrences.ts";
 
 export function NextExecutions() {
   const { cronValue } = useContext(CronExpressionContext);
-  const nextExecutions = calculateNextFiveOccurrences(cronValue);
+  const nextExecutions = calculateNextOccurrences(cronValue);
 
   return (
     <div className="font-mono">
