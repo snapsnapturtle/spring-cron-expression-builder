@@ -1,4 +1,4 @@
-import { CronValue } from "../context/CronExpressionContext.tsx";
+import { CronValue } from "../context/CronExpressionContext/CronExpressionContext.tsx";
 
 export function mapCronValueInOrder<T>(
   cronValue: CronValue,

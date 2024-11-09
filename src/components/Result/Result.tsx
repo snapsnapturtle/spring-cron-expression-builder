@@ -1,4 +1,4 @@
-import { CronExpressionContext } from "../../context/CronExpressionContext.tsx";
+import { CronExpressionContext } from "../../context/CronExpressionContext/CronExpressionContext.tsx";
 import { useContext } from "react";
 import { formatCronValue } from "../../utils/formatCronValue.ts";
 

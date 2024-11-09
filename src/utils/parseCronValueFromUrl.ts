@@ -1,4 +1,4 @@
-import { CronValue } from "../context/CronExpressionContext.tsx";
+import { CronValue } from "../context/CronExpressionContext/CronExpressionContext.tsx";
 import { defaultCronValue } from "../context/defaultCronValue.tsx";
 
 export function parseCronValueFromUrl(windowLocationSearch: string): CronValue {

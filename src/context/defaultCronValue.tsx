@@ -1,4 +1,4 @@
-import { CronValue } from "./CronExpressionContext.tsx";
+import { CronValue } from "./CronExpressionContext/CronExpressionContext.tsx";
 
 export const defaultCronValue: CronValue = {
   seconds: ["*"],
