@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { useSyncToQueryParams } from "./useSyncToQueryParams.ts";
-import { CronValue } from "../context/CronExpressionContext.tsx";
+import { CronValue } from "../context/CronExpressionContext/CronExpressionContext.tsx";
 import { renderHook } from "@testing-library/react";
 import { defaultCronValue } from "../context/defaultCronValue.tsx";
 

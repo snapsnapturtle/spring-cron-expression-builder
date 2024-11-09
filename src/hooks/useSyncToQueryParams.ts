@@ -1,4 +1,4 @@
-import { CronValue } from "../context/CronExpressionContext.tsx";
+import { CronValue } from "../context/CronExpressionContext/CronExpressionContext.tsx";
 import { useEffect } from "react";
 import { defaultCronValue } from "../context/defaultCronValue.tsx";
 import { buildQueryParamsFromCronValue } from "../utils/buildQueryParamsFromCronValue.ts";

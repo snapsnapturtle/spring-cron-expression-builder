@@ -1,4 +1,4 @@
-import { CronValue } from "../context/CronExpressionContext.tsx";
+import { CronValue } from "../context/CronExpressionContext/CronExpressionContext.tsx";
 import { mapCronValueInOrder } from "./mapCronValueInOrder.ts";
 
 export function buildQueryParamsFromCronValue(cronValue: CronValue): string {

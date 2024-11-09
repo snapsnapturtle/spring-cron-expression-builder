@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react";
-import { CronExpressionContext } from "../../context/CronExpressionContext.tsx";
+import { CronExpressionContext } from "../../context/CronExpressionContext/CronExpressionContext.tsx";
 import { calculateNextOccurrences } from "../../utils/calculateNextOccurrences.ts";
 
 export function NextExecutions() {

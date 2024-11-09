@@ -1,4 +1,4 @@
-import { CronExpressionContext } from "../../context/CronExpressionContext.tsx";
+import { CronExpressionContext } from "../../context/CronExpressionContext/CronExpressionContext.tsx";
 import { useContext, useEffect } from "react";
 import { MultiSelect, MultiSelectOption } from "../MultiSelect/MultiSelect.tsx";
 import { Controller, useForm } from "react-hook-form";
