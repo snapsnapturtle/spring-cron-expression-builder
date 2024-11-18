@@ -20,7 +20,7 @@ updates:
         patterns:
           - "eslint"
           - "eslint-plugin-*"
-          - "@typescript-eslint/*"
+          - "typescript-eslint"
 
   - package-ecosystem: "github-actions"
     directory: "/"
