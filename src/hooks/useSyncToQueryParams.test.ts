@@ -22,7 +22,6 @@ describe("useSyncToQueryParams", () => {
     const expectedSearch =
       "?seconds=*%2F2&minutes=1%2C2%2C3&hours=4&days=1-31%2F2&months=*&weekdays=MON-FRI";
 
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(window.history.replaceState).toHaveBeenCalledWith(
       {},
       "",
@@ -37,7 +36,6 @@ describe("useSyncToQueryParams", () => {
 
     renderHook(() => useSyncToQueryParams(cronValue));
 
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     expect(window.history.replaceState).toHaveBeenCalledWith({}, "", "/");
   });
 });
