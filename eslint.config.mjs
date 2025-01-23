@@ -17,13 +17,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: [
-      "**/dist",
-      "**/coverage",
-      "**/eslint.config.mjs",
-      "**/postcss.config.js",
-      "**/tailwind.config.js",
-    ],
+    ignores: ["**/dist", "**/coverage", "**/eslint.config.mjs"],
   },
   ...fixupConfigRules(
     compat.extends(

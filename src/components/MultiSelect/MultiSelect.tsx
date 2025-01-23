@@ -59,19 +59,19 @@ export const MultiSelect = ({
   };
 
   return (
-    <div className="mx-auto w-full min-w-[216px] max-w-xs">
+    <div className="mx-auto w-full max-w-xs min-w-[216px]">
       <Listbox as="div" value={value} onChange={handleSelect} multiple>
         {({ open }) => (
           <>
-            <Label className="mb-2 block text-sm font-medium leading-5 text-gray-900">
+            <Label className="mb-2 block text-sm leading-5 font-medium text-gray-900">
               {label}
             </Label>
             <div className="relative">
-              <span className="inline-block w-full rounded-md shadow-sm">
+              <span className="inline-block w-full rounded-md shadow-xs">
                 <ListboxButton
                   onBlur={onBlur}
                   ref={inputRef}
-                  className="relative min-h-[40px] w-full cursor-default rounded-md border border-gray-400 bg-background-100 py-2 pl-3 pr-8 text-left text-sm text-gray-1000 transition-[border-color] duration-150 hover:border-gray-500 focus:outline-none data-[open]:border-gray-500"
+                  className="bg-background-100 text-gray-1000 relative min-h-[40px] w-full cursor-default rounded-md border border-gray-400 py-2 pr-8 pl-3 text-left text-sm transition-[border-color] duration-150 hover:border-gray-500 focus:outline-hidden data-open:border-gray-500"
                 >
                   <span className="block truncate">
                     {(value ?? []).map((it) => it.name).join(", ")}
@@ -94,7 +94,7 @@ export const MultiSelect = ({
                 <ListboxOptions
                   static
                   anchor={{ to: "bottom", gap: "4px", padding: "16px" }}
-                  className="!max-h-80 w-[var(--button-width)] overflow-auto rounded-md border border-gray-400 bg-background-100 py-2 text-sm shadow-md focus:outline-none"
+                  className="bg-background-100 max-h-80! w-[var(--button-width)] overflow-auto rounded-md border border-gray-400 py-2 text-sm shadow-md focus:outline-hidden"
                 >
                   {options.map((option) => {
                     const selected = value?.some(
@@ -106,11 +106,11 @@ export const MultiSelect = ({
                         key={option.value}
                         value={option}
                         as="div"
-                        className="relative mx-2 cursor-default select-none rounded-md py-1.5 pl-2 pr-6 text-gray-1000 data-[focus]:bg-gray-200"
+                        className="text-gray-1000 relative mx-2 cursor-default rounded-md py-1.5 pr-6 pl-2 select-none data-focus:bg-gray-200"
                       >
                         <span className="block truncate">{option.name}</span>
                         {selected && (
-                          <span className="absolute inset-y-0 right-0 flex items-center pr-1.5 text-gray-1000">
+                          <span className="text-gray-1000 absolute inset-y-0 right-0 flex items-center pr-1.5">
                             <IconCheck width={20} height={20} />
                           </span>
                         )}
