@@ -21,6 +21,10 @@ updates:
           - "eslint"
           - "eslint-plugin-*"
           - "typescript-eslint"
+      tailwindcss:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/vite"
 
   - package-ecosystem: "github-actions"
     directory: "/"
