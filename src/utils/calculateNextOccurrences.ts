@@ -7,7 +7,7 @@ export function calculateNextOccurrences(
   occurrences: number = 5,
 ): Date[] {
   const nextDates: Date[] = [];
-  const parsedExpression = parser.parseExpression(formatCronValue(cronValue));
+  const parsedExpression = parser.parse(formatCronValue(cronValue));
 
   for (let i = 0; i < occurrences; i++) {
     nextDates.push(parsedExpression.next().toDate());
